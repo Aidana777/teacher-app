@@ -1,0 +1,51 @@
+.adminBlock{
+    background-color: #f2f2f2;
+    min-height: 100vh;
+}
+.adminContent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+ 
+}
+
+.imgAdmin {
+    margin-right: 20px;
+}
+
+.adminImg {
+    height: 300px;
+    border-radius: 8px;
+}
+
+.infoAdmin {
+    width: 400px;
+}
+.comments{
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    align-items: center;
+    align-items: center;
+}
+.commentField{
+    display: flex;
+    justify-content: center;
+}
+ul,li{
+    list-style: none;
+    margin-top: 5px; 
+    color: #000;
+    background-color: white;
+    width: 600px;
+    height: 40px;
+}
+.submit-button{
+    width: 120px;
+    height: 79px;
+    color: white;
+    background-color: #000;
+    
+}

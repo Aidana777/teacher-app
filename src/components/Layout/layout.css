@@ -1,0 +1,22 @@
+.header {
+    margin-left: 20px;
+}
+
+.burgerList {}
+
+.headerText {
+    display: flex;
+    justify-content: center;
+    height: 15px;
+    font-size: 23px;
+}
+
+.close-button {
+    margin-left: 270px;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
