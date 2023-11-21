@@ -1,9 +1,6 @@
 .header {
     margin-left: 20px;
 }
-
-.burgerList {}
-
 .headerText {
     display: flex;
     justify-content: center;

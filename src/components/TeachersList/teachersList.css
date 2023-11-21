@@ -1,0 +1,33 @@
+/* teachersList.css */
+
+.contentTech {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.cards {
+  border: 1px solid #ccc;
+  border-radius: 9px;
+  margin: 10px;
+  padding: 10px;
+  width: 500px;
+
+}
+
+.teacherImg {
+  width: 270px;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  margin: 0 auto;
+}
+
+textarea {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 8px;
+  box-sizing: border-box;
+}

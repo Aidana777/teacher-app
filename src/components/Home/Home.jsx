@@ -1,7 +1,9 @@
+// Home.js
 import React, { useState } from 'react';
+import Search from '../Search/Search'; // Assuming the Search component is in the same directory
 import './home.css';
 
-const Home = () => {
+const Home = ({ data }) => {
   const universitiesInBishkek = ["ОБСЕ", "AУЦА ", "Манас", "BSU", "Ала-Тоо", "УЦА", "Slavic ", "Другой ВУЗ"];
   const [isAddTeacherFormVisible, setIsAddTeacherFormVisible] = useState(false);
   const [teacherNotFound, setTeacherNotFound] = useState(false);
@@ -14,9 +16,9 @@ const Home = () => {
     position: '',
     photo: null,
   });
+  const [searchResults, setSearchResults] = useState([]);
 
   const handleUniversityButtonClick = (university) => {
-    // Implement the logic to check if the teacher for the selected university is in the database
     const teacherFound = false; // Replace with actual logic
 
     if (teacherFound) {
@@ -30,8 +32,6 @@ const Home = () => {
 
   const handleAddTeacherSubmit = (event) => {
     event.preventDefault();
-    // Implement the logic to handle the submission of the new teacher form
-    // You may want to send the data to the server, update the database, etc.
     console.log('New teacher data:', newTeacherData);
     setIsAddTeacherFormVisible(false);
   };
@@ -52,18 +52,18 @@ const Home = () => {
     });
   };
 
+  const handleSearch = (searchValue) => {
+    console.log('Search value:', searchValue);
+    const results = data.filter((teacher) =>
+      teacher.ФИО.toLowerCase().includes(searchValue.toLowerCase())
+    );
+    setSearchResults(results);
+  };
+
   return (
     <div>
-      <div className='searchFillter'>
-        <input
-          className='search'
-          type="text"
-          placeholder={`Кого ищем в ${selectedUniversity}`}
-        />
-        <div className="btnImg">
-          <img className="btnImg" src="https://myprepod.ru/icons/search_new.png" alt="SearchBtn" />
-        </div>
-      </div>
+      {/* Use the Search component */}
+      <Search placeholder={`Кого ищем в ${selectedUniversity}`} onSearch={handleSearch} />
 
       {/* Buttons for Best Universities in Bishkek */}
       <div className="universities">
@@ -144,6 +144,22 @@ const Home = () => {
           </form>
         </div>
       )}
+
+      {/* Display search results */}
+      <div>
+        <div className="teacher-cards">
+          {searchResults.map((teacher) => (
+            <div key={teacher.id} className="teacher-card">
+              <img className="teacher-img" src={teacher.img} alt={teacher.ФИО} />
+              <div className="teacher-info">
+                <p className="techName">{teacher.ФИО}</p>
+                <p className="techUnivers">{teacher.УНИВЕРСИТЕТ}</p>
+                <p className="techFacultet">{teacher.Направление}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
     </div>
   );
 };

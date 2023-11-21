@@ -1,0 +1,77 @@
+/* Add this CSS to your existing styles or create a new CSS file */
+
+.teacher-detail-card {
+    border: 1px solid #eaeaea;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    max-width: 400px;
+    background-color: #fff;
+}
+
+.teacher-detail-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.teacher-detail-info {
+    padding: 20px;
+    text-align: center;
+}
+
+.teacher-detail-name {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.teacher-detail-univers,
+.teacher-detail-faculty {
+    font-size: 18px;
+    color: #666;
+}
+
+.teacher-detail-rating {
+    font-size: 16px;
+    color: #333;
+}
+
+.comment-section{
+    display: flex;
+    width: 300px;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+
+.comment-input{
+    width: 280px;
+    margin: 0 auto;
+}
+
+.comment-save-button {
+    width: 110px;
+    margin-left: 10px;
+    height: 50px;
+    color: #fff;
+    background-color: black;
+
+}
+.comment-list{
+    width: 270px;
+    margin: 0 auto;
+    height: 50px;
+    margin-top: 10px;
+    border-radius: 10px; 
+}
+.comment-text{
+    padding: 10px;
+}
+.rating-section{
+    display: flex;
+   justify-content: center;
+
+}
+.star{
+    width: 40px;
+}
