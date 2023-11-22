@@ -1,6 +1,7 @@
 .header {
     margin-left: 20px;
 }
+
 .headerText {
     display: flex;
     justify-content: center;
@@ -17,3 +18,23 @@ a {
     color: #000;
 }
 
+.burger-menu-button {
+    font-size: 40px;
+    cursor: pointer;
+    background-color: #eceae9;
+    color: #111111;
+    padding: 8px 15px 10px 15px;
+    border: none;
+    margin: 16px;
+    font-weight: bold;
+    border-radius: 6px;
+    width: 72px;
+    vertical-align: middle;
+    height: 72px;
+}
+
+.menu-item {
+    padding: 10px;
+    font-size: 22px;
+    font-weight: 400;
+}

@@ -1,14 +1,15 @@
-.adminBlock{
+/* Default styles for larger screens */
+.adminBlock {
     background-color: #f2f2f2;
     min-height: 100vh;
 }
+
 .adminContent {
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
     padding: 20px;
- 
 }
 
 .imgAdmin {
@@ -23,18 +24,20 @@
 .infoAdmin {
     width: 400px;
 }
-.comments{
+
+.comments {
     display: flex;
     justify-content: center;
     padding: 20px;
     align-items: center;
-    align-items: center;
 }
-.commentField{
+
+.commentField {
     display: flex;
     justify-content: center;
 }
-ul,li{
+
+ul, li {
     list-style: none;
     margin-top: 5px; 
     color: #000;
@@ -42,10 +45,34 @@ ul,li{
     width: 600px;
     height: 40px;
 }
-.submit-button{
+
+.submit-button {
     width: 120px;
     height: 79px;
     color: white;
     background-color: #000;
-    
+}
+
+/* Media query for smaller screens (e.g., mobile devices) */
+@media only screen and (max-width: 768px) {
+    .adminContent {
+        flex-direction: column; 
+    }
+
+    .imgAdmin {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .infoAdmin {
+        width: 100%;
+    }
+
+    ul, li {
+        width: 100%;
+    }
+
+    .submit-button {
+        width: 100%;
+    }
 }

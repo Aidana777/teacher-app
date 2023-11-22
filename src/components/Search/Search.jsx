@@ -14,7 +14,8 @@ const Search = ({ placeholder, onSearch }) => {
   };
 
   return (
-    <div className="searchFillter">
+   <div className="searchBlockContent">
+     <div className="searchFillter">
       <input
         className="search"
         type="text"
@@ -22,10 +23,11 @@ const Search = ({ placeholder, onSearch }) => {
         value={searchValue}
         onChange={handleInputChange}
       />
-      <div className="btnImg" onClick={handleSearchClick}>
+      <button className="btnImgBlock" onClick={handleSearchClick}>
         <img className="btnImg" src="https://myprepod.ru/icons/search_new.png" alt="SearchBtn" />
-      </div>
+      </button>
     </div>
+   </div>
   );
 };
 

@@ -67,11 +67,3 @@
 .comment-text{
     padding: 10px;
 }
-.rating-section{
-    display: flex;
-   justify-content: center;
-
-}
-.star{
-    width: 40px;
-}

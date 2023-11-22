@@ -34,9 +34,9 @@ const Layout = () => {
   return (
     <div className="headerContainer">
       <h1 className="headerText">My Prepod</h1>
-      <div className="burger-menu-button" onClick={toggleBurgerMenu}>
+      <button className="burger-menu-button" onClick={toggleBurgerMenu}>
         ☰
-      </div>
+      </button>
       <Menu
         isOpen={isBurgerMenuOpen}
         onClose={closeBurgerMenu}

@@ -140,12 +140,14 @@ const Home = ({ data }) => {
               onChange={handleFileChange}
               required
             />
-            <button type="submit">Добавить</button>
+          <div className="centerBtn">
+          <button type="submit" className='addBtn'>Добавить</button>
+          </div>
           </form>
         </div>
       )}
 
-      {/* Display search results */}
+    
       <div>
         <div className="teacher-cards">
           {searchResults.map((teacher) => (
